@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community20</title>
+    <style>
+        /* Sayfanın temel stilleri */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            overflow: hidden; /* Kaydırma çubuklarını engeller */
+        }
+
+        /* Arka plan parçacıklarının tüm ekranı kaplaması için */
+        #tsparticles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        /* Metin içeriğini ortalamak için */
+        .content {
+            position: relative; 
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Başlık stili */
+        .title {
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+        
+        /* Alt başlık stili */
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 200;
+            margin-top: 1rem;
+        }
+
+        /* Başlığın altındaki çizgi */
+        .line {
+            width: 150px;
+            height: 1px;
+            background-color: white;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="tsparticles"></div>
+
+    <div class="content">
+        <h1 class="title">MART'I BEKLEYİN</h1>
+        <div class="line"></div>
+        <p class="subtitle">Community20</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.12.0/tsparticles.slim.bundle.min.js"></script>
+
+    <script>
+        tsParticles.load("tsparticles", {
+            background: {
+                color: {
+                    value: '#000000',
+                },
+            },
+            fpsLimit: 60,
+            particles: {
+                color: {
+                    value: '#ffffff',
+                },
+                move: {
+                    direction: 'none',
+                    enable: true,
+                    outModes: {
+                        default: 'out',
+                    },
+                    random: true,
+                    speed: 0.6, 
+                    straight: false,
+                },
+                number: {
+                    density: {
+                        enable: true,
+                    },
+                    value: 200, 
+                },
+                opacity: {
+                    value: { min: 0.1, max: 0.7 },
+                },
+                shape: {
+                    type: 'circle',
+                },
+                size: {
+                    value: { min: 1, max: 3 },
+                },
+            },
+            detectRetina: true,
+        });
+    </script>
+
+</body>
+</html>
