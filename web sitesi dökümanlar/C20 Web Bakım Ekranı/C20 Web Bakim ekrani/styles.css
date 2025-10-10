@@ -306,3 +306,27 @@ body {
     .top-nav { left: 10px; top: 10px; padding: 6px 10px; }
     .top-nav ul { gap: 10px; }
 }
+/* styles.css dosyasının en altına ekleyin */
+
+/* === Kurucu Listesi Link Stilleri === */
+.kurucu-listesi {
+    list-style-type: none; /* Liste başındaki noktaları kaldırır */
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+.kurucu-listesi li {
+    margin: 15px 0; /* Liste elemanları arasına boşluk koyar */
+}
+
+.kurucu-listesi a,
+.kurucu-listesi a:visited {
+    color: rgba(230, 230, 250, 0.9); /* Ana metin rengiyle aynı */
+    text-decoration: none;             /* Alt çizgiyi kaldırır */
+    transition: all 0.3s ease;
+}
+
+.kurucu-listesi a:hover {
+    color: #00FFFF; /* Üzerine gelince parlak renk */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.6); /* Neon parlama efekti */
+}
